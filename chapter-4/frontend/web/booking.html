@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    {{if not .Processed}}
+    <meta http-equiv="refresh" content="2">
+    {{end}}
+    <title>Online Booking</title>
+</head>
+<body>
+<h1>Your Booking</h1>
+<dl>
+    <dt>Name</dt>
+    <dd>{{.Name}}</dd>
+    <dt>Email</dt>
+    <dd>{{.Email}}</dd>
+    <dt>Processed</dt>
+    {{if not .Processed}}
+    <dd style="background-color: orange">PROCESSING...</dd>
+    {{else}}
+    <dd style="background-color: blue; color: white">PROCESSED</dd>
+    {{end}}
+</dl>
+</body>
+</html>
